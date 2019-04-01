@@ -1,18 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-/* quotes: "\201C" "\201D" "\2018" "\2019"; */
-
-const Section = styled.section`
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  background: #fff;
-  width: 60%;
-  margin: 100px auto;
-  border-radius: 4px;
-  padding: 50px;
-  max-width: 700px;
-`;
-
 const Quote = styled.blockquote`
   text-align: center;
   font-size: 20px;
@@ -37,9 +25,6 @@ const Quote = styled.blockquote`
     width: 55px;
     transform: translateX(-50%);
   }
-`;
-const Main = styled.main`
-  color: #303044;
 `;
 
 const Button = styled.button`
@@ -89,19 +74,17 @@ export default () => {
   }, []);
 
   return (
-    <Main>
-      <Section>
-        {idea && (
-          <Quote>
-            <p>{idea.idea}</p>
-            by:{" "}
-            <Link target="_blank" href={`https://twitter.com/${idea.author}`}>
-              @{idea.author}
-            </Link>
-          </Quote>
-        )}
-        <Button onClick={getIdea}>New Idea</Button>
-      </Section>
-    </Main>
+    <>
+      {idea && (
+        <Quote>
+          <p>{idea.idea}</p>
+          by:{" "}
+          <Link target="_blank" href={`https://twitter.com/${idea.author}`}>
+            @{idea.author}
+          </Link>
+        </Quote>
+      )}
+      <Button onClick={getIdea}>New Idea</Button>
+    </>
   );
 };

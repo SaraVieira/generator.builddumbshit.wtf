@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "dumb-shit-generator",
+  "alias": "generator.builddumbshit.wtf",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "generator",
   "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
@@ -15,5 +15,7 @@
     "styled-components": "4.2.0",
     "styled-normalize": "8.0.6"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
 }
